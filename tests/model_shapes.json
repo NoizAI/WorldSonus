@@ -1,0 +1,2286 @@
+{
+  "aggregated_tokens": [
+    1,
+    512
+  ],
+  "audio_proj.0.weight": [
+    1024,
+    512
+  ],
+  "audio_proj.0.bias": [
+    1024
+  ],
+  "audio_proj.2.weight": [
+    1024,
+    1024
+  ],
+  "audio_proj.2.bias": [
+    1024
+  ],
+  "video_temporal_encoder.summary_token": [
+    1,
+    1,
+    512
+  ],
+  "video_temporal_encoder.position": [
+    1,
+    3,
+    512
+  ],
+  "video_temporal_encoder.input_proj.weight": [
+    512,
+    512
+  ],
+  "video_temporal_encoder.input_proj.bias": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.self_attn.in_proj_weight": [
+    1536,
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.self_attn.in_proj_bias": [
+    1536
+  ],
+  "video_temporal_encoder.encoder.layers.0.self_attn.out_proj.weight": [
+    512,
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.self_attn.out_proj.bias": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.linear1.weight": [
+    2048,
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.linear1.bias": [
+    2048
+  ],
+  "video_temporal_encoder.encoder.layers.0.linear2.weight": [
+    512,
+    2048
+  ],
+  "video_temporal_encoder.encoder.layers.0.linear2.bias": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.norm1.weight": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.norm1.bias": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.norm2.weight": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.0.norm2.bias": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.self_attn.in_proj_weight": [
+    1536,
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.self_attn.in_proj_bias": [
+    1536
+  ],
+  "video_temporal_encoder.encoder.layers.1.self_attn.out_proj.weight": [
+    512,
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.self_attn.out_proj.bias": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.linear1.weight": [
+    2048,
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.linear1.bias": [
+    2048
+  ],
+  "video_temporal_encoder.encoder.layers.1.linear2.weight": [
+    512,
+    2048
+  ],
+  "video_temporal_encoder.encoder.layers.1.linear2.bias": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.norm1.weight": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.norm1.bias": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.norm2.weight": [
+    512
+  ],
+  "video_temporal_encoder.encoder.layers.1.norm2.bias": [
+    512
+  ],
+  "video_temporal_encoder.output_norm.weight": [
+    512
+  ],
+  "video_temporal_encoder.output_norm.bias": [
+    512
+  ],
+  "audio_temporal_encoder.summary_token": [
+    1,
+    1,
+    512
+  ],
+  "audio_temporal_encoder.position": [
+    1,
+    3,
+    512
+  ],
+  "audio_temporal_encoder.input_proj.weight": [
+    512,
+    64
+  ],
+  "audio_temporal_encoder.input_proj.bias": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.self_attn.in_proj_weight": [
+    1536,
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.self_attn.in_proj_bias": [
+    1536
+  ],
+  "audio_temporal_encoder.encoder.layers.0.self_attn.out_proj.weight": [
+    512,
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.self_attn.out_proj.bias": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.linear1.weight": [
+    2048,
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.linear1.bias": [
+    2048
+  ],
+  "audio_temporal_encoder.encoder.layers.0.linear2.weight": [
+    512,
+    2048
+  ],
+  "audio_temporal_encoder.encoder.layers.0.linear2.bias": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.norm1.weight": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.norm1.bias": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.norm2.weight": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.0.norm2.bias": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.self_attn.in_proj_weight": [
+    1536,
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.self_attn.in_proj_bias": [
+    1536
+  ],
+  "audio_temporal_encoder.encoder.layers.1.self_attn.out_proj.weight": [
+    512,
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.self_attn.out_proj.bias": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.linear1.weight": [
+    2048,
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.linear1.bias": [
+    2048
+  ],
+  "audio_temporal_encoder.encoder.layers.1.linear2.weight": [
+    512,
+    2048
+  ],
+  "audio_temporal_encoder.encoder.layers.1.linear2.bias": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.norm1.weight": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.norm1.bias": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.norm2.weight": [
+    512
+  ],
+  "audio_temporal_encoder.encoder.layers.1.norm2.bias": [
+    512
+  ],
+  "audio_temporal_encoder.output_norm.weight": [
+    512
+  ],
+  "audio_temporal_encoder.output_norm.bias": [
+    512
+  ],
+  "video_proj.0.weight": [
+    1024,
+    512
+  ],
+  "video_proj.0.bias": [
+    1024
+  ],
+  "video_proj.2.weight": [
+    1024,
+    1024
+  ],
+  "video_proj.2.bias": [
+    1024
+  ],
+  "video_proj_3d.0.weight": [
+    512,
+    256,
+    1,
+    1,
+    1
+  ],
+  "video_proj_3d.0.bias": [
+    512
+  ],
+  "video_proj_3d.2.weight": [
+    512,
+    512,
+    1,
+    3,
+    3
+  ],
+  "aggregate_transformer.positional_embedding": [
+    96,
+    512
+  ],
+  "aggregate_transformer.aggregated_token_positional_embedding": [
+    1,
+    512
+  ],
+  "aggregate_transformer.output_norm.weight": [
+    512
+  ],
+  "aggregate_transformer.layers.0.attention.wqkv.weight": [
+    1536,
+    512
+  ],
+  "aggregate_transformer.layers.0.attention.wo.weight": [
+    512,
+    512
+  ],
+  "aggregate_transformer.layers.0.feed_forward.w13.weight": [
+    3072,
+    512
+  ],
+  "aggregate_transformer.layers.0.feed_forward.w2.weight": [
+    512,
+    1536
+  ],
+  "aggregate_transformer.layers.0.attention_norm.weight": [
+    512
+  ],
+  "aggregate_transformer.layers.0.ffn_norm.weight": [
+    512
+  ],
+  "transformer.null_text_embedding": [
+    1,
+    32,
+    640
+  ],
+  "transformer.null_embedding": [
+    1,
+    1024
+  ],
+  "transformer.init_audio_token": [
+    1,
+    1024
+  ],
+  "transformer.text_input_proj.weight": [
+    1024,
+    640
+  ],
+  "transformer.prompt_resampler.learned_queries": [
+    31,
+    640
+  ],
+  "transformer.prompt_resampler.source_norm.weight": [
+    640
+  ],
+  "transformer.prompt_resampler.source_norm.bias": [
+    640
+  ],
+  "transformer.prompt_resampler.query_norm.weight": [
+    640
+  ],
+  "transformer.prompt_resampler.query_norm.bias": [
+    640
+  ],
+  "transformer.prompt_resampler.wq.weight": [
+    640,
+    640
+  ],
+  "transformer.prompt_resampler.wkv.weight": [
+    1280,
+    640
+  ],
+  "transformer.prompt_resampler.wo.weight": [
+    640,
+    640
+  ],
+  "transformer.prompt_resampler.ffn_norm.weight": [
+    640
+  ],
+  "transformer.prompt_resampler.ffn_norm.bias": [
+    640
+  ],
+  "transformer.prompt_resampler.ffn.0.weight": [
+    2560,
+    640
+  ],
+  "transformer.prompt_resampler.ffn.0.bias": [
+    2560
+  ],
+  "transformer.prompt_resampler.ffn.2.weight": [
+    640,
+    2560
+  ],
+  "transformer.prompt_resampler.ffn.2.bias": [
+    640
+  ],
+  "transformer.prompt_resampler.output_norm.weight": [
+    640
+  ],
+  "transformer.prompt_resampler.output_norm.bias": [
+    640
+  ],
+  "transformer.type_emb.type_embedding.weight": [
+    2,
+    1024
+  ],
+  "transformer.output_norm.weight": [
+    1024
+  ],
+  "transformer.layers.0.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.0.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.0.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.0.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.0.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.0.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.0.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.0.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.0.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.0.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.0.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.1.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.1.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.1.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.1.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.1.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.1.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.1.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.1.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.1.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.1.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.1.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.2.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.2.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.2.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.2.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.2.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.2.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.2.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.2.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.2.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.2.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.2.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.3.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.3.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.3.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.3.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.3.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.3.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.3.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.3.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.3.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.3.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.3.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.4.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.4.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.4.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.4.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.4.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.4.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.4.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.4.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.4.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.4.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.4.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.5.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.5.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.5.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.5.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.5.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.5.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.5.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.5.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.5.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.5.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.5.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.6.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.6.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.6.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.6.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.6.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.6.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.6.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.6.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.6.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.6.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.6.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.7.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.7.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.7.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.7.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.7.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.7.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.7.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.7.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.7.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.7.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.7.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.8.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.8.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.8.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.8.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.8.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.8.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.8.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.8.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.8.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.8.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.8.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.9.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.9.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.9.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.9.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.9.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.9.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.9.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.9.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.9.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.9.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.9.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.10.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.10.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.10.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.10.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.10.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.10.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.10.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.10.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.10.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.10.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.10.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.11.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.11.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.11.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.11.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.11.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.11.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.11.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.11.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.11.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.11.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.11.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.12.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.12.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.12.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.12.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.12.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.12.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.12.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.12.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.12.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.12.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.12.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.13.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.13.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.13.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.13.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.13.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.13.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.13.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.13.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.13.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.13.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.13.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.14.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.14.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.14.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.14.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.14.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.14.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.14.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.14.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.14.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.14.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.14.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.15.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.15.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.15.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.15.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.15.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.15.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.15.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.15.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.15.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.15.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.15.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.16.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.16.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.16.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.16.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.16.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.16.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.16.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.16.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.16.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.16.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.16.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.17.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.17.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.17.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.17.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.17.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.17.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.17.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.17.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.17.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.17.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.17.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.18.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.18.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.18.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.18.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.18.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.18.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.18.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.18.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.18.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.18.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.18.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.19.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.19.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.19.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.19.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.19.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.19.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.19.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.19.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.19.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.19.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.19.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.20.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.20.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.20.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.20.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.20.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.20.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.20.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.20.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.20.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.20.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.20.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.21.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.21.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.21.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.21.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.21.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.21.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.21.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.21.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.21.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.21.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.21.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.22.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.22.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.22.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.22.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.22.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.22.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.22.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.22.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.22.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.22.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.22.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.23.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.23.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.23.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.23.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.23.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.23.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.23.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.23.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.23.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.23.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.23.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.24.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.24.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.24.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.24.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.24.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.24.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.24.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.24.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.24.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.24.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.24.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.25.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.25.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.25.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.25.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.25.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.25.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.25.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.25.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.25.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.25.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.25.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.26.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.26.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.26.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.26.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.26.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.26.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.26.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.26.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.26.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.26.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.26.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.27.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.27.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.27.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.27.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.27.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.27.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.27.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.27.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.27.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.27.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.27.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.28.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.28.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.28.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.28.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.28.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.28.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.28.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.28.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.28.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.28.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.28.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.29.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.29.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.29.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.29.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.29.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.29.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.29.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.29.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.29.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.29.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.29.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.30.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.30.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.30.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.30.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.30.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.30.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.30.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.30.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.30.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.30.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.30.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.31.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.31.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.31.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.31.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.31.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.31.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.31.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.31.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.31.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.31.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.31.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.32.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.32.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.32.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.32.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.32.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.32.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.32.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.32.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.32.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.32.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.32.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.33.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.33.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.33.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.33.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.33.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.33.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.33.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.33.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.33.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.33.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.33.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.34.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.34.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.34.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.34.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.34.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.34.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.34.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.34.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.34.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.34.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.34.ffn_norm.weight": [
+    1024
+  ],
+  "transformer.layers.35.attention.wqkv.weight": [
+    3072,
+    1024
+  ],
+  "transformer.layers.35.attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.35.feed_forward.w13.weight": [
+    8192,
+    1024
+  ],
+  "transformer.layers.35.feed_forward.w2.weight": [
+    1024,
+    4096
+  ],
+  "transformer.layers.35.attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.35.text_attention_norm.weight": [
+    1024
+  ],
+  "transformer.layers.35.text_cross_attention.context_norm.weight": [
+    1024
+  ],
+  "transformer.layers.35.text_cross_attention.wq.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.35.text_cross_attention.wkv.weight": [
+    2048,
+    1024
+  ],
+  "transformer.layers.35.text_cross_attention.wo.weight": [
+    1024,
+    1024
+  ],
+  "transformer.layers.35.ffn_norm.weight": [
+    1024
+  ],
+  "diffloss.diffusion_head.fake_latent": [
+    1,
+    1280
+  ],
+  "diffloss.diffusion_head.slot_position": [
+    1,
+    3,
+    1280
+  ],
+  "diffloss.diffusion_head.input_proj.0.weight": [
+    1280,
+    64
+  ],
+  "diffloss.diffusion_head.input_proj.0.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.0.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.0.attention.in_proj_weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.0.attention.in_proj_bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.0.attention.out_proj.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.0.attention.out_proj.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.0.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.0.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.1.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.1.attention.in_proj_weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.1.attention.in_proj_bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.1.attention.out_proj.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.1.attention.out_proj.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.1.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.1.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.2.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.2.mlp.0.weight": [
+    5120,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.2.mlp.0.bias": [
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.2.mlp.3.weight": [
+    1280,
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.2.mlp.3.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.2.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.2.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.3.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.3.mlp.0.weight": [
+    5120,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.3.mlp.0.bias": [
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.3.mlp.3.weight": [
+    1280,
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.3.mlp.3.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.3.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.3.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.4.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.4.mlp.0.weight": [
+    5120,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.4.mlp.0.bias": [
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.4.mlp.3.weight": [
+    1280,
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.4.mlp.3.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.4.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.4.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.5.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.5.mlp.0.weight": [
+    5120,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.5.mlp.0.bias": [
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.5.mlp.3.weight": [
+    1280,
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.5.mlp.3.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.5.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.5.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.6.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.6.mlp.0.weight": [
+    5120,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.6.mlp.0.bias": [
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.6.mlp.3.weight": [
+    1280,
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.6.mlp.3.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.6.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.6.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.res_blocks.7.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.7.mlp.0.weight": [
+    5120,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.7.mlp.0.bias": [
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.7.mlp.3.weight": [
+    1280,
+    5120
+  ],
+  "diffloss.diffusion_head.res_blocks.7.mlp.3.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.7.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.res_blocks.7.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.extra_temporal_attention_blocks.0.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.extra_temporal_attention_blocks.0.attention.in_proj_weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.extra_temporal_attention_blocks.0.attention.in_proj_bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.extra_temporal_attention_blocks.0.attention.out_proj.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.extra_temporal_attention_blocks.0.attention.out_proj.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.extra_temporal_attention_blocks.0.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.extra_temporal_attention_blocks.0.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.extra_cross_attention_blocks.0.query_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.extra_cross_attention_blocks.0.context_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.extra_cross_attention_blocks.0.attention.in_proj_weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.extra_cross_attention_blocks.0.attention.in_proj_bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.extra_cross_attention_blocks.0.attention.out_proj.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.extra_cross_attention_blocks.0.attention.out_proj.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.extra_cross_attention_blocks.0.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.extra_cross_attention_blocks.0.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.full_stage_cross_attention_blocks.0.query_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_cross_attention_blocks.0.context_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_cross_attention_blocks.0.attention.in_proj_weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_cross_attention_blocks.0.attention.in_proj_bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.full_stage_cross_attention_blocks.0.attention.out_proj.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_cross_attention_blocks.0.attention.out_proj.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_cross_attention_blocks.0.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_cross_attention_blocks.0.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.full_stage_temporal_attention_blocks.0.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_temporal_attention_blocks.0.attention.in_proj_weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_temporal_attention_blocks.0.attention.in_proj_bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.full_stage_temporal_attention_blocks.0.attention.out_proj.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_temporal_attention_blocks.0.attention.out_proj.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_temporal_attention_blocks.0.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_temporal_attention_blocks.0.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.0.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.0.mlp.0.weight": [
+    5120,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.0.mlp.0.bias": [
+    5120
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.0.mlp.3.weight": [
+    1280,
+    5120
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.0.mlp.3.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.0.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.0.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.1.in_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.1.mlp.0.weight": [
+    5120,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.1.mlp.0.bias": [
+    5120
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.1.mlp.3.weight": [
+    1280,
+    5120
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.1.mlp.3.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.1.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.full_stage_mlp_blocks.1.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.final_layer.linear.weight": [
+    64,
+    1280
+  ],
+  "diffloss.diffusion_head.final_layer.linear.bias": [
+    64
+  ],
+  "diffloss.diffusion_head.final_layer.adaLN_modulation.1.weight": [
+    2560,
+    1280
+  ],
+  "diffloss.diffusion_head.final_layer.adaLN_modulation.1.bias": [
+    2560
+  ],
+  "diffloss.diffusion_head.time_embed.freqs": [
+    128
+  ],
+  "diffloss.diffusion_head.time_embed.mlp.0.weight": [
+    1280,
+    256
+  ],
+  "diffloss.diffusion_head.time_embed.mlp.0.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.time_embed.mlp.2.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.time_embed.mlp.2.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.cond_embed.0.weight": [
+    1280,
+    2048
+  ],
+  "diffloss.diffusion_head.cond_embed.0.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.cond_embed.2.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.cond_embed.2.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.local_cond_embed.0.weight": [
+    1280,
+    512
+  ],
+  "diffloss.diffusion_head.local_cond_embed.0.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.local_cond_embed.2.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.local_cond_embed.2.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.0.query_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.0.context_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.0.attention.in_proj_weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.0.attention.in_proj_bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.0.attention.out_proj.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.0.attention.out_proj.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.0.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.0.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.1.query_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.1.context_rms.weight": [
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.1.attention.in_proj_weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.1.attention.in_proj_bias": [
+    3840
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.1.attention.out_proj.weight": [
+    1280,
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.1.attention.out_proj.bias": [
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.1.adaLN_modulation.1.weight": [
+    3840,
+    1280
+  ],
+  "diffloss.diffusion_head.cross_attention_blocks.1.adaLN_modulation.1.bias": [
+    3840
+  ],
+  "video_input_adapter.projection.weight": [
+    128,
+    384
+  ],
+  "video_input_adapter.projection.bias": [
+    128
+  ]
+}

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.env
+assets/
+build/
+dist/
+*.egg-info/
+checkpoints/
+outputs/
+data/
+*.pt
+*.pth
+*.ckpt
+*.safetensors

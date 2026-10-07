@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worldsonus"
+version = "0.1.0"
+description = "Autoregressive video-conditioned audio generation"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = ["torch>=2.6,<3", "einops==0.8.0", "numpy>=1.24", "soundfile>=0.12", "tqdm>=4.66"]
+
+[project.optional-dependencies]
+features = ["transformers==5.5.4", "huggingface-hub>=1.0", "sentencepiece>=0.2"]
+dev = ["pytest>=8", "ruff>=0.11"]
+
+[project.scripts]
+worldsonus-infer = "worldsonus.infer:main"
+
+[tool.setuptools.packages.find]
+include = ["worldsonus*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
