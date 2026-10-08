@@ -529,7 +529,10 @@ class MainTransformerLayer(nn.Module):
 
 
 class MainTransformer(nn.Module):
-    def __init__(self, layer_class: tp.Type[MainTransformerLayer] = MainTransformerLayer, **kwargs):
+    def __init__(
+        self, layer_class: tp.Type[MainTransformerLayer] = MainTransformerLayer,
+        *, causal_window_size: int = 100, **kwargs,
+    ):
         super().__init__()
         assert True
         self.num_heads = 16
@@ -547,7 +550,7 @@ class MainTransformer(nn.Module):
         self.init_audio_token = nn.Parameter(torch.randn(1, 1024) / math.sqrt(1024))
         self.register_parameter("additional_init_audio_tokens", None)
         self.seq_len = 200
-        self.causal_window_size = 100
+        self.causal_window_size = causal_window_size
         self.freqs_cis = precompute_freqs_cis(200, 64, 10000, rope_scaling=None)
         self.x_token_dropout = nn.Dropout(0.0)
         self.y_token_dropout = nn.Dropout(0.0)

@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 import torch
+import pytest
 
 from worldsonus.model import WorldSonus
 from worldsonus.video_delta import concat_video_with_delta
@@ -78,17 +79,18 @@ def test_codec_preserves_cudnn_acceleration_and_restores_tf32():
     assert seen == [(True, False)]
 
 
-def test_ring_cache_causality_across_wraparound():
+@pytest.mark.parametrize("capacity", [4, 80, 100])
+def test_ring_cache_causality_across_wraparound(capacity):
     from worldsonus.transformer import RingKVCache
 
-    cache = RingKVCache(1, 4, torch.float32)
-    for start in range(0, 12, 2):
+    cache = RingKVCache(1, capacity, torch.float32)
+    for start in range(0, capacity * 3, 2):
         positions = torch.tensor([start, start + 1])
         tokens = positions.float()[None, None, :, None].expand(1, 16, 2, 64)
         keys, _, mask = cache.update_for_attention(positions, tokens, tokens)
         for query in range(2):
             visible = keys[0, 0, mask[0, 0, query], 0].sort().values
             end = start + query
-            expected = torch.arange(max(0, end - 3), end + 1).float()
+            expected = torch.arange(max(0, end - capacity + 1), end + 1).float()
             torch.testing.assert_close(visible, expected)
-    assert cache.k_cache.shape == (1, 16, 4, 64)
+    assert cache.k_cache.shape == (1, 16, capacity, 64)

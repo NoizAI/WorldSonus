@@ -38,7 +38,9 @@ class StreamingGenerator:
             self.cpu_rng = torch.get_rng_state()
             self.cuda_rng = torch.cuda.get_rng_state(self.device) if self.devices else None
         model._inference_guidance_method = "cfg"
-        model.transformer.set_context_extension("swa", window_size=100)
+        model.transformer.set_context_extension(
+            "swa", window_size=model.transformer.causal_window_size
+        )
         with torch.device(self.device):
             model.transformer.setup_caches(batch_size * 3, num_chunks * 2, self.dtype)
         self.set_prompt(**prompt)

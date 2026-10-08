@@ -146,8 +146,10 @@ class TemporalSummaryEncoder(nn.Module):
 
 
 class WorldSonus(nn.Module):
-    def __init__(self):
+    def __init__(self, *, context_window_chunks: int = 50):
         super().__init__()
+        if type(context_window_chunks) is not int or context_window_chunks < 1:
+            raise ValueError("context_window_chunks must be a positive integer")
         self.chunk_pipeline = True
         self.video_input_spec = resolve_video_input_spec(
             name="bottleneck128_delta",
@@ -194,7 +196,7 @@ class WorldSonus(nn.Module):
             )
         self.aggregate_transformer = AggregateTransformer()
         self.aggregated_tokens = nn.Parameter(0.044194173824159216 * torch.randn(1, 512))
-        self.transformer = MainTransformer()
+        self.transformer = MainTransformer(causal_window_size=2 * context_window_chunks)
         self.diffloss = FlowSampler()
         with torch.random.fork_rng(devices=[]):
             self.video_input_adapter = VideoInputAdapter()

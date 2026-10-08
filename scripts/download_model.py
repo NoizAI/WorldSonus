@@ -5,7 +5,7 @@ from pathlib import Path
 
 from huggingface_hub import HfApi, hf_hub_download
 
-ASSETS = ("worldsonus_150k.pt", "audio_codec.pt", "z_stats.pt")
+ASSETS = ("worldsonus_150k_kv4.pt", "audio_codec.pt", "z_stats.pt")
 
 
 def main():

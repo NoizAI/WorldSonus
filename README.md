@@ -34,6 +34,11 @@ pip install -e '.[features]'
 ## Pretrained models
 
 Weights are available on [Hugging Face](https://huggingface.co/FF2416/WorldSonus).
+The latest 150k model uses a four-second context window, read automatically from
+the checkpoint. Update the code and rerun the download command when upgrading.
+The earlier `worldsonus_150k.pt` remains compatible through `--checkpoint`;
+it retains its original five-second window.
+
 Download the generation model, audio decoder, normalization statistics, and
 frozen video/text encoders:
 
@@ -58,7 +63,8 @@ python -m worldsonus.infer \
   --output output.wav
 ```
 
-The output is stereo 48 kHz audio. By default the input duration is rounded down
+The output is stereo 48 kHz floating-point WAV, preserving decoder amplitudes
+without integer-PCM clipping. By default the input duration is rounded down
 to a complete 100 ms chunk. Use `--start 5 --seconds 10` to select a window, or
 omit `--prompt` for video-only conditioning.
 

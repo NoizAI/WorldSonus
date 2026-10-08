@@ -16,6 +16,17 @@ HISTORY_PREFIXES = (
 TRAINING_PREFIXES = ("sync_repa_projector.", "_sync_repa_")
 
 
+def model_config(payload):
+    """Legacy releases used 50 chunks; newer weights carry their own window."""
+    config = payload.get("config", {})
+    if not isinstance(config, dict) or set(config) - {"context_window_chunks"}:
+        raise ValueError("Unsupported WorldSonus checkpoint configuration")
+    chunks = config.get("context_window_chunks", 50)
+    if type(chunks) is not int or chunks < 1:
+        raise ValueError("context_window_chunks must be a positive integer")
+    return {"context_window_chunks": chunks}
+
+
 def atomic_save(payload, path: str | Path) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -35,7 +46,7 @@ def load_model(path: str | Path, *, device="cpu", dtype=torch.float32, ema=True)
     if payload.get("architecture") != ARCHITECTURE:
         raise ValueError("Not a WorldSonus C3 no-H0 release checkpoint; convert it first")
     state = payload["ema" if ema and "ema" in payload else "model"]
-    model = WorldSonus()
+    model = WorldSonus(**model_config(payload))
     model.load_state_dict(state, strict=True)
     return model.to(device=device, dtype=dtype).eval()
 
@@ -55,13 +66,25 @@ def export_checkpoint(source: str, destination: str, *, trusted_pickle: bool = F
     if len(dropped) not in (0, 20):
         raise ValueError(f"Unexpected inactive history tensor count: {len(dropped)}")
     training = {key: value for key, value in state.items() if key.startswith(TRAINING_PREFIXES)}
-    if len(training) not in (0, 9):
+    if len(training) not in (0, 7, 9):
         raise ValueError(f"Unexpected training-only tensor count: {len(training)}")
     clean = {
         key: value for key, value in state.items() if key not in dropped and key not in training
     }
+    config = model_config(payload)
+    args = payload.get("args")
+    if args is not None:
+        args = args if isinstance(args, dict) else vars(args)
+        chunks = args.get("ar_context_window_chunks")
+        if chunks is None:
+            seconds = args.get("ar_context_window_seconds")
+            seconds = 5.0 if seconds is None else seconds
+            chunks = round(float(seconds) * 10)
+            if abs(chunks / 10 - float(seconds)) > 1e-6:
+                raise ValueError("Context duration must be a multiple of 100 ms")
+        config = model_config({"config": {"context_window_chunks": chunks}})
     with torch.device("meta"):
-        reference = WorldSonus()
+        reference = WorldSonus(**config)
     expected = reference.state_dict()
     if set(clean) != set(expected):
         raise ValueError(
@@ -74,6 +97,7 @@ def export_checkpoint(source: str, destination: str, *, trusted_pickle: bool = F
     atomic_save(
         {
             "architecture": ARCHITECTURE,
+            "config": config,
             "model": clean,
             "step": int(payload.get("steps", payload.get("step", 150000))),
         },

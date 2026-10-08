@@ -48,7 +48,7 @@ def main():
         parser.error("Precomputed features already contain prompt tensors")
     if args.output and Path(args.output).exists():
         parser.error("Output exists; choose a new file")
-    checkpoint = args.checkpoint or str(args.assets / "worldsonus_150k.pt")
+    checkpoint = args.checkpoint or str(args.assets / "worldsonus_150k_kv4.pt")
     codec = args.codec or str(args.assets / "audio_codec.pt")
     stats = args.z_stats or str(args.assets / "z_stats.pt")
     dino = args.dino or str(args.assets / "dino")
@@ -126,7 +126,7 @@ def main():
         if args.output:
             Path(args.output).parent.mkdir(parents=True, exist_ok=True)
             writer = stack.enter_context(
-                sf.SoundFile(args.output, mode="w", samplerate=48000, channels=2, subtype="PCM_24")
+                sf.SoundFile(args.output, mode="w", samplerate=48000, channels=2, subtype="FLOAT")
             )
         samples = 0
         for waveform in output:
