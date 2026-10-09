@@ -48,7 +48,7 @@ def main():
         parser.error("Precomputed features already contain prompt tensors")
     if args.output and Path(args.output).exists():
         parser.error("Output exists; choose a new file")
-    checkpoint = args.checkpoint or str(args.assets / "worldsonus_150k_kv4.pt")
+    checkpoint = args.checkpoint or str(args.assets / "worldsonus_150k_padtrim.pt")
     codec = args.codec or str(args.assets / "audio_codec.pt")
     stats = args.z_stats or str(args.assets / "z_stats.pt")
     dino = args.dino or str(args.assets / "dino")

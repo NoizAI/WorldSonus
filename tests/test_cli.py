@@ -34,11 +34,16 @@ def test_wav_preserves_decoder_peaks(tmp_path, monkeypatch):
     monkeypatch.setattr(sys, "argv", ["infer", "--features", str(features),
                                       "--device", "cpu", "--output", str(output)])
     monkeypatch.setattr(cli, "load_latent_stats", lambda _: (torch.zeros(64), torch.ones(64)))
-    monkeypatch.setattr(cli, "load_model", lambda *a, **k: object())
+    loaded = []
+    def load_model(path, **kwargs):
+        loaded.append(path)
+        return object()
+    monkeypatch.setattr(cli, "load_model", load_model)
     monkeypatch.setattr(cli, "generate", lambda *a, **k: torch.zeros(1, 3, 64))
     monkeypatch.setattr(cli.AudioDecoder, "from_checkpoint",
                         lambda *a, **k: lambda z: torch.full((1, 2, 4800), 1.25))
     cli.main()
+    assert loaded == ["assets/worldsonus_150k_padtrim.pt"]
     wave, rate = sf.read(output, dtype="float32")
     assert rate == 48000 and sf.info(output).subtype == "FLOAT"
     assert (wave == 1.25).all()

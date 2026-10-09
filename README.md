@@ -34,10 +34,11 @@ pip install -e '.[features]'
 ## Pretrained models
 
 Weights are available on [Hugging Face](https://huggingface.co/FF2416/WorldSonus).
-The latest 150k model uses a four-second context window, read automatically from
-the checkpoint. Update the code and rerun the download command when upgrading.
-The earlier `worldsonus_150k.pt` remains compatible through `--checkpoint`;
-it retains its original five-second window.
+The latest `worldsonus_150k_padtrim.pt` was retrained with audio-padding filtering
+and tail trimming, followed by HQ fine-tuning. Its five-second context window is
+read automatically from the checkpoint. Update the code and rerun the download
+command when upgrading. The decoder and latent normalization are unchanged.
+The earlier `worldsonus_150k.pt` remains compatible through `--checkpoint`.
 
 Download the generation model, audio decoder, normalization statistics, and
 frozen video/text encoders:

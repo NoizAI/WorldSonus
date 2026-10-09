@@ -24,7 +24,8 @@ def test_unknown_configuration_is_rejected():
         model_config({"config": {"window": 40}})
 
 
-def test_new_export_keeps_window_and_removes_linear_projector(tmp_path):
+@pytest.mark.parametrize("chunks", [40, 50])
+def test_new_export_keeps_window_and_removes_linear_projector(tmp_path, chunks):
     with torch.device("meta"):
         state = WorldSonus().state_dict()
         for name in ("weight", "bias"):
@@ -34,12 +35,12 @@ def test_new_export_keeps_window_and_removes_linear_projector(tmp_path):
             state[f"_sync_repa_{name}"] = torch.empty(())
     source, dest = tmp_path / "training.pt", tmp_path / "release.pt"
     torch.save({"ema_model": state, "steps": 150000,
-                "args": {"ar_context_window_chunks": 40}}, source)
+                "args": {"ar_context_window_chunks": chunks}}, source)
     assert export_checkpoint(str(source), str(dest)) == (638, 7)
     result = torch.load(dest, weights_only=True)
     assert result["architecture"] == ARCHITECTURE
     assert result["step"] == 150000
-    assert model_config(result) == {"context_window_chunks": 40}
+    assert model_config(result) == {"context_window_chunks": chunks}
     with torch.device("meta"):
         model = load_model(dest, device="meta")
-    assert model.transformer.causal_window_size == 80
+    assert model.transformer.causal_window_size == chunks * 2
