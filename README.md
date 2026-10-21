@@ -34,14 +34,6 @@ pip install -e '.[features]'
 ## Pretrained models
 
 Weights are available on [Hugging Face](https://huggingface.co/FF2416/WorldSonus).
-The latest `worldsonus_150k_padtrim.pt` was retrained with audio-padding filtering
-and tail trimming, followed by HQ fine-tuning. Its five-second context window is
-read automatically from the checkpoint. Update the code and rerun the download
-command when upgrading. The decoder and latent normalization are unchanged.
-The earlier `worldsonus_150k.pt` remains compatible through `--checkpoint`.
-
-Download the generation model, audio decoder, normalization statistics, and
-frozen video/text encoders:
 
 ```bash
 python scripts/download_model.py --output assets
@@ -49,8 +41,7 @@ python scripts/download_encoders.py --output assets
 ```
 
 DINOv3 and T5Gemma 2 retain their upstream licenses and access conditions.
-Accept their terms and authenticate with Hugging Face if required. Use the
-normalization statistics supplied with the checkpoint.
+Accept their terms and authenticate with Hugging Face if required.
 
 ## Video-to-audio generation
 
@@ -64,36 +55,18 @@ python -m worldsonus.infer \
   --output output.wav
 ```
 
-The output is stereo 48 kHz floating-point WAV, preserving decoder amplitudes
-without integer-PCM clipping. By default the input duration is rounded down
-to a complete 100 ms chunk. Use `--start 5 --seconds 10` to select a window, or
-omit `--prompt` for video-only conditioning.
+The output is a stereo 48 kHz WAV file. Use `--start 5 --seconds 10` to select
+a window, or omit `--prompt` for video-only conditioning.
 
 ## Streaming generation
 
-Add `--stream` to read video incrementally and generate/decode each 100 ms audio
-chunk as soon as its three video frames are available:
+Add `--stream` to generate audio incrementally:
 
 ```bash
 python -m worldsonus.infer \
   --video input.mp4 --prompt "A train passes beside a river." \
   --stream --output output.wav
 ```
-
-Visual temporal differences, autoregressive Ring-KV history, and causal decoder
-convolution states persist across chunks. Audio is not assembled from
-independently decoded clips. Model/encoder loading happens before streaming
-starts; this reference implementation does not promise a particular latency.
-
-Offline and streaming modes use the same three-frame generation path. With the
-same inputs, seed, device and compilation mode, they produce matching latents;
-whole-clip and incremental decoding differ only by floating-point rounding.
-
-CUDA inference is compiled by default in both modes. Add `--no-compile` to
-disable compilation; CPU inference remains uncompiled by default.
-The first invocation compiles kernels, and the first chunks of a new session
-warm CUDA graphs. Expect slower startup; compilation does not change the model
-or sampling configuration.
 
 For immediate playback with FFplay, stream raw PCM instead of waiting for a file:
 
@@ -103,6 +76,9 @@ python -m worldsonus.infer \
   --stream --pcm-stdout \
   | ffplay -f f32le -ar 48000 -ac 2 -i - -nodisp -autoexit
 ```
+
+The first run takes longer to load models and compile kernels. Use
+`--no-compile` to disable compilation if needed.
 
 ## License
 

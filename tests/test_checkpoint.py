@@ -5,12 +5,18 @@ from worldsonus.checkpoint import ARCHITECTURE, export_checkpoint, load_model, m
 from worldsonus.model import WorldSonus
 
 
-def test_legacy_and_kv4_configuration():
-    assert model_config({}) == {"context_window_chunks": 50}
-    for chunks in (40, 50):
-        with torch.device("meta"):
-            model = WorldSonus(context_window_chunks=chunks)
-        assert model.transformer.causal_window_size == chunks * 2
+def test_current_release_configuration():
+    config = model_config({"config": {"context_window_chunks": 50}})
+    with torch.device("meta"):
+        model = WorldSonus(**config)
+    assert model.transformer.causal_window_size == 100
+
+
+@pytest.mark.parametrize("payload", [{}, {"config": {}},
+                                     {"config": {"context_window_chunks": 40}}])
+def test_legacy_configuration_is_rejected(payload):
+    with pytest.raises(ValueError, match="Unsupported"):
+        model_config(payload)
 
 
 @pytest.mark.parametrize("value", [0, -1, 40.5, True, "40", None])
@@ -24,7 +30,7 @@ def test_unknown_configuration_is_rejected():
         model_config({"config": {"window": 40}})
 
 
-@pytest.mark.parametrize("chunks", [40, 50])
+@pytest.mark.parametrize("chunks", [50])
 def test_new_export_keeps_window_and_removes_linear_projector(tmp_path, chunks):
     with torch.device("meta"):
         state = WorldSonus().state_dict()

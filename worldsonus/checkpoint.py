@@ -1,4 +1,4 @@
-"""Strict, tensor-only release checkpoints and explicit no-H0 conversion."""
+"""Strict, tensor-only checkpoints for the supported release."""
 
 from __future__ import annotations
 
@@ -17,13 +17,13 @@ TRAINING_PREFIXES = ("sync_repa_projector.", "_sync_repa_")
 
 
 def model_config(payload):
-    """Legacy releases used 50 chunks; newer weights carry their own window."""
-    config = payload.get("config", {})
-    if not isinstance(config, dict) or set(config) - {"context_window_chunks"}:
+    """Require the supported release configuration; no legacy defaults."""
+    config = payload.get("config")
+    if not isinstance(config, dict) or set(config) != {"context_window_chunks"}:
         raise ValueError("Unsupported WorldSonus checkpoint configuration")
-    chunks = config.get("context_window_chunks", 50)
-    if type(chunks) is not int or chunks < 1:
-        raise ValueError("context_window_chunks must be a positive integer")
+    chunks = config["context_window_chunks"]
+    if type(chunks) is not int or chunks != 50:
+        raise ValueError("Unsupported WorldSonus checkpoint; download the current release")
     return {"context_window_chunks": chunks}
 
 
@@ -44,7 +44,7 @@ def load_model(path: str | Path, *, device="cpu", dtype=torch.float32, ema=True)
 
     payload = torch.load(path, map_location="cpu", weights_only=True)
     if payload.get("architecture") != ARCHITECTURE:
-        raise ValueError("Not a WorldSonus C3 no-H0 release checkpoint; convert it first")
+        raise ValueError("Not a supported WorldSonus checkpoint; download the current release")
     state = payload["ema" if ema and "ema" in payload else "model"]
     model = WorldSonus(**model_config(payload))
     model.load_state_dict(state, strict=True)
@@ -71,18 +71,20 @@ def export_checkpoint(source: str, destination: str, *, trusted_pickle: bool = F
     clean = {
         key: value for key, value in state.items() if key not in dropped and key not in training
     }
-    config = model_config(payload)
     args = payload.get("args")
     if args is not None:
         args = args if isinstance(args, dict) else vars(args)
         chunks = args.get("ar_context_window_chunks")
         if chunks is None:
             seconds = args.get("ar_context_window_seconds")
-            seconds = 5.0 if seconds is None else seconds
+            if seconds is None:
+                raise ValueError("Checkpoint is missing its context configuration")
             chunks = round(float(seconds) * 10)
             if abs(chunks / 10 - float(seconds)) > 1e-6:
                 raise ValueError("Context duration must be a multiple of 100 ms")
         config = model_config({"config": {"context_window_chunks": chunks}})
+    else:
+        config = model_config(payload)
     with torch.device("meta"):
         reference = WorldSonus(**config)
     expected = reference.state_dict()

@@ -43,7 +43,7 @@ def test_wav_preserves_decoder_peaks(tmp_path, monkeypatch):
     monkeypatch.setattr(cli.AudioDecoder, "from_checkpoint",
                         lambda *a, **k: lambda z: torch.full((1, 2, 4800), 1.25))
     cli.main()
-    assert loaded == ["assets/worldsonus_150k_padtrim.pt"]
+    assert loaded == ["assets/worldsonus.pt"]
     wave, rate = sf.read(output, dtype="float32")
     assert rate == 48000 and sf.info(output).subtype == "FLOAT"
     assert (wave == 1.25).all()
