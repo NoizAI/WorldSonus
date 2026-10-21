@@ -92,3 +92,17 @@ We thank [DINOv3](https://github.com/facebookresearch/dinov3),
 [T5Gemma](https://huggingface.co/google/t5gemma-2-270m-270m), and
 [stable-audio-tools](https://github.com/Stability-AI/stable-audio-tools)
 for their open research and tools.
+
+## Citation
+
+```bibtex
+@misc{fang2026worldsonus,
+  title={WorldSonus: Bringing Sound to Worlds},
+  author={Pengjun Fang and Jingyi Fa and Kam Man Wu and Jiaming Wang and Haoyuan Huang and Yaguang Wu and Xiangjun Huang and Ziyang Ma and Weijia Chen and Hongyu Liu and Zeyue Tian and Qifeng Chen},
+  year={2026},
+  eprint={2610.08760},
+  archivePrefix={arXiv},
+  primaryClass={cs.SD},
+  url={https://arxiv.org/abs/2610.08760}
+}
+```
