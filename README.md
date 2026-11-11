@@ -12,7 +12,7 @@ during a sequence.
 
 ## Demo
 
-https://github.com/user-attachments/assets/22400b47-b292-476a-89a1-eeaf33372ba2
+https://github.com/user-attachments/assets/60487f76-9340-4cb8-81aa-ba13f94b12e9
 
 ## Overview
 
